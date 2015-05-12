@@ -30,7 +30,6 @@ namespace Final_Assignment.Graph
         {
             Distance = double.MaxValue;
             Previous = null;
-//            Position = null;
             Scratch = 0;
         }
 

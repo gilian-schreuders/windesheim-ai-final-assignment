@@ -206,6 +206,20 @@ namespace Final_Assignment.Graph
          Public methods
          =================================================================*/
 
+        public List<Node> GetPath(int id)
+        {
+            var results = new List<Node>();
+            var currentNode = Map[id];
+
+            while (currentNode.Previous != null)
+            {
+                results.Add(currentNode);
+                currentNode = currentNode.Previous;
+            }
+
+            return results;
+        } 
+        
         public void Dijkstra(int id)
         {
             var queue = new Queue<Edge>();
@@ -230,6 +244,7 @@ namespace Final_Assignment.Graph
             }
 
             ResetNodes();
+            startNode.Distance = 0;
             queue.Enqueue(new Edge(startNode, 0));
 
             nodesSeen = 0;

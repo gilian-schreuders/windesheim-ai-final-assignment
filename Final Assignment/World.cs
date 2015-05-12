@@ -53,7 +53,8 @@ namespace Final_Assignment
             };
 
             Graph = new Graph.Graph(WorldWidth, WorldHeight, 50, StaticEntities);
-            Graph.Dijkstra(0);
+            Graph.Dijkstra(200);
+            var test = Graph.GetPath(0);
         }
 
         /*=================================================================================

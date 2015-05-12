@@ -211,6 +211,7 @@ namespace Final_Assignment.Graph
             var results = new List<Node>();
             var currentNode = Map[id];
 
+
             while (currentNode.Previous != null)
             {
                 results.Add(currentNode);
